@@ -3,11 +3,16 @@ local Window = Library.CreateLib("BGA Hub", "Serpent")
 local Tab = Window:NewTab("Credits")
 local Section = Tab:NewSection("depthgocrazy - scripter")
 local Section = Tab:NewSection("youtube.com/@ghirgerlel7145 - First Showcase/Testing")
-
+Section:NewKeybind("Toggle Hub", "KeybindInfo", Enum.KeyCode.Delete, function()
+	Library:ToggleUI()
+end)
 
 
 local Tab = Window:NewTab("Stain")
 local Section = Tab:NewSection("Stain")
+Section:NewButton("Fake Crimson Parry", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dendendenver1/BGA-Hub/main/Fake%20Parry.lua"))()
+end)
 Section:NewButton("Uppercut Finisher", "Uppcercut Finisher", function()
 local player = game.Players.LocalPlayer
 repeat wait() until player.Character.Humanoid
@@ -661,6 +666,9 @@ playAnim:Play()
 end)
 local Tab = Window:NewTab("Todoroki")
 local Section = Tab:NewSection("Todoroki")
+Section:NewButton("Fake Ice Counter", "ButtonInfo", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dendendenver1/BGA-Hub/main/Fake%20Ice%20Counter.lua"))()
+end)
 Section:NewButton("Awakening", "Awakening", function()
 local player = game.Players.LocalPlayer
 repeat wait() until player.Character.Humanoid
@@ -676,6 +684,7 @@ anim.AnimationId = "rbxassetid://14169664632"
 local playAnim = humanoid:LoadAnimation(anim)
 playAnim:Play()
 end)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 Section:NewButton("Burning Soul", "Burning Soul", function()
 local player = game.Players.LocalPlayer
 repeat wait() until player.Character.Humanoid
